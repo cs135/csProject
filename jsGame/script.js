@@ -100,6 +100,15 @@ function Enemy(type) {
 	} else if (this.type == 2) {
 		this.maxSpd = 3;
 	}
+	
+	//draws the enemy character - same as the player
+	this.draw = function() {
+		context.beginPath();
+		context.rect(this.x - 5, this.y, 10, 15);
+		context.arc(this.x, this.y, 5, 0, 2 * Math.PI);
+		context.closePath();
+		context.fill();
+	};
 }
 
 /*
