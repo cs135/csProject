@@ -33,6 +33,7 @@ var D = 68;
 //Color codes
 var BLACK = "#000000";
 var RED = "#FF0000";
+var BLUE = "#60A7EE"; //for the Freeze powerup
 
 //Control flags
 var mousePos	= [2];
@@ -210,6 +211,17 @@ function Enemy(type) {
 /*
 	player object
 */
+function Freeze() {
+	this.x;
+	this.y;
+	
+	this.draw = function() {
+		context.beginPath();
+		context.closePath();
+		context.fillStyle = BLUE;
+		context.fill();
+	}
+}
 
 function Player() {
 	this.x;
